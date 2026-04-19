@@ -1,6 +1,6 @@
 #include <iostream>
 #include <iomanip>
-#define TAM 4
+#define TAM 50
 #include <cstdlib>
 #include <ctime>
 #include <vector>
@@ -151,10 +151,11 @@ int main()
     {
         for (int j = 0; j < TAM; j++)
         {
-            matriz[i][j] = rand() % 2;
-            cout << matriz[i][j] << " ";
+            //! 20% paredes
+          matriz[i][j] = (rand() % 10 < 2) ? 1 : 0;
+        //    cout << matriz[i][j] << " ";
         }
-        cout << endl;
+      //  cout << endl;
     }
 
     estrela(matriz, 0, 0, TAM - 1, TAM - 1);
